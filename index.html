@@ -1,0 +1,1648 @@
+<head>
+
+  <!-- 🔥 OPEN GRAPH (ĐẶT LÊN ĐẦU TIÊN) -->
+  <meta property="og:title" content="Thiệp cưới Trọng Anh & Vũ Thùy 💍">
+  <meta property="og:description" content="Trân trọng kính mời bạn đến chung vui cùng chúng tôi ❤️">
+  <meta property="og:image" content="https://anhthuy2505.pages.dev/images/og.jpg">
+  <meta property="og:image:secure_url" content="https://anhthuy2505.pages.dev/images/og.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://invitations.wedding.dpdns.org/AnhThuy2505">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Thiệp cưới Trọng Anh & Vũ Thùy">
+
+  <!-- 🔥 TWITTER (Messenger đọc thêm) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://anhthuy2505.pages.dev/images/og.jpg">
+
+  <!-- ⚙️ META CƠ BẢN -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 🏷️ TITLE -->
+  <title>💍 Trọng Anh & Vũ Thùy</title>
+  <!-- Preload ảnh quan trọng nhất -->
+  <link rel="preload" as="image" href="Mở đầu.webp" type="image/webp">
+  <link rel="preload" as="image" href="Đầu trang.webp" type="image/webp">
+  <!-- FONT PRELOAD & ANTI-FOUT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload critical display fonts to prevent FOUT -->
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500&display=block">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Cinzel:wght@400;700&family=Poppins:wght@300;400;500&display=block">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box
+    }
+
+    :root {
+      /* CHỈNH VỊ TRÍ ẢNH MỞ ĐẦU TẠI ĐÂY */
+      /* 0% = Sát trái | 50% = Chính giữa | 100% = Sát phải */
+      --opening-bg-x: 50%;
+    }
+
+    /* ===== CENTERED CONTAINER & VIGNETTE ===== */
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(160deg, #1a0f08 0%, #2d1808 50%, #1a0f08 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Vignette sides — creates cinema-style dark frame (STRONGER) */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(ellipse 50% 100% at 50% 50%, transparent 28%, rgba(0, 0, 0, 0.93) 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* ULTRA NARROW CONTAINER - max-width 460px */
+    .wrap {
+      max-width: 460px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 3;
+      background: transparent;
+      padding: 0 10px;
+    }
+
+    canvas#threejs {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      pointer-events: none
+    }
+
+    .section {
+      position: relative;
+      z-index: 3
+    }
+
+    /* Cards */
+    .card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 45px rgba(201, 169, 110, .15), 0 0 0 1px rgba(201, 169, 110, .2)
+    }
+
+    .card-dark {
+      background: #fdf6ee;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 15px 45px rgba(201, 169, 110, .12), 0 0 0 1px rgba(201, 169, 110, .15)
+    }
+
+    /* Typography */
+    .gold {
+      color: #c9a96e
+    }
+
+    .gold-line {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #c9a96e, transparent);
+      width: 180px;
+      margin: 10px auto
+    }
+
+    .sect-label {
+      color: #c9a96e;
+      font-size: .7rem;
+      letter-spacing: 4px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      text-transform: uppercase
+    }
+
+    .script {
+      font-family: 'Alex Brush', cursive;
+      font-weight: 400
+    }
+
+    .serif {
+      font-family: 'Playfair Display', serif
+    }
+
+    /* CONSISTENT COUPLE NAME FONT - Alex Brush for all name displays */
+    .name-script {
+      font-family: 'Alex Brush', cursive;
+      font-weight: 400;
+      line-height: 1.3;
+      letter-spacing: 0.02em;
+      padding: 0.1em 0;
+    }
+
+    /* Preloader with start image (lowered subjects) */
+    #preloader {
+      position: fixed;
+      inset: 0;
+      background: url('Mở đầu.webp') left var(--opening-bg-x) top 0/cover no-repeat;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      transition: opacity 0.7s
+    }
+
+    #preloader::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .5)
+    }
+
+    .loader-ring {
+      width: 72px;
+      height: 72px;
+      border: 2px solid rgba(240, 224, 208, .3);
+      border-top: 2px solid #c9a96e;
+      border-radius: 50%;
+      animation: spin 1.2s linear infinite;
+      z-index: 1
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg)
+      }
+    }
+
+    /* Music btn */
+    #music-btn {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 998;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: rgba(201, 169, 110, .9);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 18px rgba(201, 169, 110, .5);
+      transition: .3s
+    }
+
+    #music-btn:hover {
+      transform: scale(1.1)
+    }
+
+
+
+    /* Envelope */
+    #env-overlay {
+      position: fixed;
+      inset: 0;
+      background: url('Mở đầu.webp') left var(--opening-bg-x) top 0/cover no-repeat;
+      z-index: 999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #env-overlay::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, .65);
+      backdrop-filter: blur(6px);
+      z-index: 1;
+    }
+
+    /* RESPONSIVE ENVELOPE - Scaled for 460px container */
+    .env-box {
+      width: min(320px, 92vw);
+      text-align: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .env-card {
+      background: linear-gradient(135deg, #fdf6ee, #f5e6d0);
+      border: 1px solid #c9a96e;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(201, 169, 110, .4);
+      transition: transform .6s, opacity 1s;
+      perspective: 1000px;
+      width: 100%;
+      height: 175px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center
+    }
+
+    .env-card.open {
+      transform: perspective(1000px) scale(1.02)
+    }
+
+    .env-flap {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      border-left: 150px solid transparent;
+      border-right: 150px solid transparent;
+      border-top: 88px solid #e8c9a0;
+      transition: transform .6s cubic-bezier(.4, 0, .2, 1);
+      transform-origin: top center;
+      backface-visibility: hidden;
+      z-index: 10
+    }
+
+    .env-flap.open {
+      transform: rotateX(-180deg)
+    }
+
+    #env-photo {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px) scale(.85);
+      width: 260px;
+      height: 360px;
+      max-width: 82%;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, .3);
+      opacity: 0;
+      transition: all .4s cubic-bezier(.4, 0, .2, 1);
+      z-index: 5
+    }
+
+    #env-photo.pop {
+      transform: translateX(-50%) translateY(-20px) scale(1);
+      opacity: 1
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #c9a96e, #e8c87a, #c9a96e);
+      color: #2d1f0e;
+      font-weight: 600;
+      padding: 12px 36px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Poppins', sans-serif;
+      font-size: .9rem;
+      transition: .3s;
+      box-shadow: 0 8px 28px rgba(201, 169, 110, .4);
+      display: inline-block
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(201, 169, 110, .6)
+    }
+
+    /* Flying hearts */
+    @keyframes flyOut {
+      0% {
+        transform: translate(-50%, -50%)scale(.2);
+        opacity: 0
+      }
+
+      20% {
+        opacity: 1
+      }
+
+      100% {
+        transform: translate(calc(-50% + var(--tx)), calc(-50% + var(--ty)))scale(1.5)rotate(var(--rot));
+        opacity: 0
+      }
+    }
+
+    .flying-heart {
+      position: absolute;
+      top: 45%;
+      left: 50%;
+      color: #ff4d4d;
+      animation: flyOut ease-out forwards;
+      z-index: 1000;
+      pointer-events: none
+    }
+
+    /* Hero calendar */
+    .cal-day {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cinzel', serif;
+      color: rgba(255, 255, 255, .75);
+      font-size: 1.1rem
+    }
+
+    @keyframes hBlink {
+      0% {
+        opacity: .6;
+        transform: translate(-50%, -50%) scale(.95)
+      }
+
+      100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1.05)
+      }
+    }
+
+    /* Hero heart — flex-safe animation (scale only, no translate) */
+    @keyframes heartPulseFade {
+
+      0%,
+      100% {
+        transform: scale(0.96);
+        opacity: 0.8;
+      }
+
+      50% {
+        transform: scale(1.06);
+        opacity: 1;
+      }
+    }
+
+    @keyframes tBlink {
+      0% {
+        opacity: .7
+      }
+
+      100% {
+        opacity: 1;
+        text-shadow: 0 0 15px rgba(201, 169, 110, .9)
+      }
+    }
+
+    @keyframes bounce {
+      from {
+        transform: translateY(0)
+      }
+
+      to {
+        transform: translateY(8px)
+      }
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        box-shadow: 0 8px 30px rgba(201, 169, 110, .4)
+      }
+
+      50% {
+        box-shadow: 0 8px 50px rgba(201, 169, 110, .9)
+      }
+    }
+
+    @keyframes pFall {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px)rotate(0)
+      }
+
+      10% {
+        opacity: 1
+      }
+
+      90% {
+        opacity: .8
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(105vh)rotate(720deg)
+      }
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar {
+      width: 4px
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #c9a96e;
+      border-radius: 2px
+    }
+
+    /* fade-up */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(36px);
+      transition: all .8s ease
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0)
+    }
+
+    /* Gallery */
+    .gal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px
+    }
+
+    .gal-item {
+      aspect-ratio: 3/4;
+      overflow: hidden;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      transition: transform .4s
+    }
+
+    .gal-item:hover {
+      transform: scale(1.04)
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, .93);
+      z-index: 9998;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column
+    }
+
+    .lightbox.active {
+      display: flex
+    }
+
+    /* Form */
+    input,
+    select,
+    textarea {
+      width: 100%;
+      padding: 11px 15px;
+      border: 1px solid #e8d5c0;
+      border-radius: 8px;
+      background: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: .88rem;
+      outline: none;
+      transition: .3s;
+      margin-bottom: 11px
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #c9a96e;
+      box-shadow: 0 0 0 3px rgba(201, 169, 110, .15)
+    }
+
+    /* Flip */
+    .flip {
+      display: inline-block;
+      background: linear-gradient(135deg, #2d1f0e, #4a3520);
+      color: #c9a96e;
+      border-radius: 8px;
+      padding: 11px 15px;
+      font-size: 2.2rem;
+      font-weight: 700;
+      min-width: 64px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, .3);
+      font-family: 'Playfair Display', serif;
+      position: relative
+    }
+
+    .flip::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 100%;
+      height: 1px;
+      background: rgba(0, 0, 0, .4)
+    }
+
+    /* tilt */
+    .tilt-card {
+      transition: transform .3s, box-shadow .3s
+    }
+
+    /* back to top */
+    #btt {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c9a96e, #e8c87a);
+      color: #2d1808;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(201, 169, 110, .5);
+      z-index: 997;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: .3s;
+      transform: translateY(20px)
+    }
+
+    #btt.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0)
+    }
+
+    #btt:hover {
+      transform: translateY(-4px)
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader">
+    <div style="position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:1"></div>
+    <div style="z-index:2;text-align:center">
+      <!-- CONSISTENT COUPLE NAME FONT: Alex Brush across all sections -->
+      <div class="name-script"
+        style="font-size:clamp(2.8rem,8vw,4.5rem);color:#fdf6ee;text-shadow:0 3px 18px rgba(0,0,0,.7);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px">
+        <span>Trọng Anh</span>
+        <picture>
+          <source srcset="Heart_new.png" type="image/png">
+          <img src="Heart_new.png" width="80" height="80"
+            style="width:80px;height:auto;display:block;filter:drop-shadow(0 3px 6px rgba(201,169,110,.4))" alt="♥"
+            loading="eager">
+        </picture>
+        <span>Vũ Thùy</span>
+      </div>
+      <p
+        style="color:rgba(255,255,255,.7);letter-spacing:6px;font-size:.85rem;margin-top:8px;font-family:'Cinzel',sans-serif">
+        31 • 05 • 2026</p>
+      <div class="loader-ring" style="margin:24px auto 0"></div>
+    </div>
+  </div>
+
+  <canvas id="threejs"></canvas>
+
+  <!-- MUSIC -->
+  <button id="music-btn" title="Bật/tắt nhạc">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="white"
+      stroke-width="2">
+      <path stroke-linecap="round" stroke-linejoin="round"
+        d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+    </svg>
+  </button>
+
+  <audio id="bg-music" loop>
+    <source src="Westlife%20-%20Beautiful%20in%20white.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- ENVELOPE -->
+  <div id="env-overlay">
+    <div class="env-box">
+      <p
+        style="color:#e8c87a;font-size:1.5rem;letter-spacing:2px;font-family:'Playfair Display',serif;font-weight:600;font-style:italic;margin-bottom:22px">
+        Trân Trọng Kính Mời</p>
+      <div class="env-card" id="env-card">
+        <div class="env-flap" id="env-flap"></div>
+        <picture>
+          <source srcset="Bì thư.webp" type="image/webp">
+          <img id="env-photo" src="Bì thư.webp" width="260" height="360" loading="eager" alt="Ảnh bì thư mời cưới">
+        </picture>
+        <div
+          style="position:absolute;bottom:0;left:0;width:100%;height:65%;background:linear-gradient(0deg,#e8c9a0,#f5e6d0);border-radius:0 0 12px 12px;z-index:6;clip-path:polygon(0 0,50% 20%,100% 0,100% 100%,0 100%)">
+        </div>
+      </div>
+      <button id="open-btn" class="btn-gold"
+        style="margin-top:26px;animation:pulse 2s infinite;font-family:'Alex Brush',cursive;font-size:2.0rem;padding:6px 42px;display:inline-flex;align-items:center;gap:12px;white-space:nowrap;line-height:1">
+        <span style="font-size:1.8rem">💌</span> Mở Thiệp Mời
+      </button>
+      <p
+        style="color:rgba(255,255,255,.6);font-size:.8rem;margin-top:12px;white-space:nowrap;letter-spacing:1px;font-family:'Poppins',sans-serif">
+        Chúng tôi có một tin vui
+        muốn gửi đến bạn</p>
+    </div>
+  </div>
+
+  <!-- ===== MAIN CENTERED WRAP ===== -->
+  <div class="wrap">
+
+
+    <!-- HERO -->
+    <!-- HERO SECTION - Updated with clearer background photo, lower text position, stronger text prominence and gold heart -->
+    <section class="section min-h-screen flex items-end justify-center" id="hero"
+      style="position: relative; overflow: hidden;">
+      <!-- Background with pop effect -->
+      <picture style="position:absolute;inset:0;z-index:0;">
+        <source srcset="Đầu trang.webp" type="image/webp">
+        <img src="Đầu trang.webp" width="1200" height="800" loading="eager" alt="Ảnh nền thiệp cưới Trọng Anh Vũ Thùy"
+          style="width:100%;height:100%;object-fit:cover;object-position:center top;filter: contrast(1.15) brightness(1.1);">
+      </picture>
+      <!-- Clearer overlay gradient -->
+      <div
+        style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(0,0,0,0.15) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.65) 100%);z-index:1">
+      </div>
+      <div
+        style="position:absolute;inset:0;background:radial-gradient(ellipse at 30% 50%,rgba(201,169,110,.2),transparent 70%);z-index:1">
+      </div>
+      <!-- Shifted text position lower with higher padding-top (was 80px, now 140px) -->
+      <div class="relative text-center px-5 w-full tilt-card fade-up"
+        style="z-index:2;padding-top:80px;padding-bottom:20px">
+        <!-- Prominent Couple Names with Luxury Styling -->
+        <div class="name-script"
+          style="font-size:clamp(3.2rem,11vw,4.5rem);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:15px;margin-bottom:400px;position:relative">
+
+          <!-- Subtle Glow Background behind text -->
+          <div
+            style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:140%;height:140%;background:radial-gradient(circle, rgba(20,10,5,0.4) 0%, transparent 70%);z-index:-1;filter:blur(20px);pointer-events:none">
+          </div>
+
+          <!-- Groom's Name with Metallic Gold Gradient -->
+          <span
+            style="display:block;line-height:1.3;padding:0 15px;background:linear-gradient(135deg, #fdf6ee 0%, #f0d9a0 30%, #c9a96e 50%, #f0d9a0 70%, #fdf6ee 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.6))">Trọng
+            Anh</span>
+
+          <!-- Elegant Minimal Hand-drawn SVG Heart -->
+          <div
+            style="margin:5px 0;filter:drop-shadow(0 0 10px rgba(201,169,110,0.6));animation:heartPulseFade 1.8s ease-in-out infinite">
+            <svg width="60" height="50" viewBox="0 0 200 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M100 160C100 160 20 110 20 60C20 35 40 20 60 20C75 20 90 30 100 45C110 30 125 20 140 20C160 20 180 35 180 60C180 110 100 160 100 160Z"
+                stroke="#f0d9a0" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M70 45C65 40 55 40 50 45" stroke="#fff" stroke-width="3" stroke-linecap="round" opacity="0.4" />
+            </svg>
+          </div>
+
+          <!-- Bride's Name with Metallic Gold Gradient -->
+          <span
+            style="display:block;line-height:1.3;padding:0 15px;background:linear-gradient(135deg, #fdf6ee 0%, #f0d9a0 30%, #c9a96e 50%, #f0d9a0 70%, #fdf6ee 100%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;filter:drop-shadow(0 2px 8px rgba(0,0,0,0.6))">Vũ
+            Thùy</span>
+        </div>
+
+        <!-- SAVE THE DATE -->
+        <p
+          style="color:#fff;font-size:clamp(.75rem,2.5vw,.95rem);letter-spacing:6px;font-family:'Cinzel',sans-serif;font-weight:400;text-transform:uppercase;margin:24px 0 10px;text-shadow:0 1px 12px rgba(0,0,0,0.6)">
+          SAVE THE DATE</p>
+
+        <!-- MONTH & YEAR -->
+        <div
+          style="font-family:'Alex Brush',cursive;font-size:clamp(2.6rem,10vw,3.6rem);color:#f0d9a0;margin-bottom:16px;text-shadow:0 2px 10px rgba(0,0,0,.5)">
+          Tháng 5 - 2026</div>
+
+        <!-- COMPACT CALENDAR -->
+        <div style="max-width:280px;margin:20px auto 60px;font-family:'Cinzel',serif;color:#e8d5c0;text-align:center">
+          <div
+            style="display:grid;grid-template-columns:repeat(7,1fr);gap:8px;margin-bottom:16px;color:#c9a96e;font-size:.75rem;letter-spacing:1px;font-weight:600">
+            <div>T2</div>
+            <div>T3</div>
+            <div>T4</div>
+            <div>T5</div>
+            <div>T6</div>
+            <div>T7</div>
+            <div>CN</div>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:6px;row-gap:22px;font-size:.9rem">
+            <div style="opacity:.7">18</div>
+            <div style="opacity:.7">19</div>
+            <div style="opacity:.7">20</div>
+            <div style="opacity:.7">21</div>
+            <div style="opacity:.7">22</div>
+            <div style="opacity:.7">23</div>
+            <div style="opacity:.7">24</div>
+            <div style="opacity:.7">25</div>
+            <div style="opacity:.7">26</div>
+            <div style="opacity:.7">27</div>
+            <div style="opacity:.7">28</div>
+            <div style="opacity:.7">29</div>
+            <div style="opacity:.7">30</div>
+            <div style="position:relative">
+              <span
+                style="position:relative;z-index:2;color:#fff;font-weight:bold;font-size:1.05rem;text-shadow:0 2px 8px rgba(0,0,0,.8)">31</span>
+              <picture>
+                <source srcset="Heart_new.png" type="image/png">
+                <img src="Heart_new.png" width="70" height="70"
+                  style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70px;max-width:none;height:auto;z-index:1;animation:hBlink 1s infinite alternate;pointer-events:none;filter:drop-shadow(0 2px 5px rgba(201,169,110,.5))"
+                  alt="" loading="lazy">
+              </picture>
+              <div
+                style="position:absolute;top:40px;right:120%;transform:translateX(50%);white-space:nowrap;font-family:'Alex Brush',cursive;color:#fdf6ee;font-size:1.8rem;animation:tBlink 1s infinite alternate;text-shadow:0 2px 8px rgba(0,0,0,.5)">
+                Our wedding day</div>
+            </div>
+          </div>
+        </div>
+        <a href="#couple"
+          style="display:inline-block;color:rgba(255,255,255,.5);font-size:1.5rem;animation:bounce .8s ease-in-out infinite alternate;text-decoration:none">⌄</a>
+      </div>
+    </section>
+
+    <!-- COUPLE SECTION - Vertical stack: Chú Rể trên, Cô Dâu dưới -->
+    <section class="section py-10" id="couple" style="background:linear-gradient(180deg,#1a0d07,#2d1808)">
+      <div class="mx-3 text-center mb-3">
+        <p class="sect-label">CẶP ĐÔI</p>
+        <h2 class="fade-up serif"
+          style="font-size:clamp(1.6rem,5vw,2.2rem);color:white;margin-top:6px;text-shadow:0 2px 12px rgba(0,0,0,.5)">
+          Nhân Vật Chính</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <!-- CHÚ RỂ -->
+      <div class="card fade-up tilt-card mx-3 overflow-hidden"
+        style="margin-top:10px;border-top:4px solid rgba(100,160,220,.5)">
+        <div style="width:100%;height:360px;overflow:hidden;position:relative">
+          <picture>
+            <source srcset="Chú rể.webp" type="image/webp">
+            <img src="Chú rể.webp" alt="Ảnh Chân Dung Chú Rể Trọng Anh" width="1000" height="1333" loading="lazy"
+              style="width:100%;height:100%;object-fit:cover;object-position:center 5%">
+          </picture>
+        </div>
+        <div class="text-center py-6"
+          style="background:linear-gradient(135deg,rgba(184,212,232,.12),rgba(253,246,238,1))">
+          <h3 class="name-script"
+            style="font-size:clamp(2.4rem,9vw,3.2rem);color:#3c5e8b;text-shadow:0 2px 10px rgba(60,94,139,.3)">
+            Trọng Anh
+          </h3>
+          <p class="serif" style="color:#6080a8;font-style:italic;font-size:.85rem;margin-top:6px;letter-spacing:2px">
+            Chú Rể</p>
+        </div>
+      </div>
+
+      <!-- CÔ DÂU -->
+      <div class="card fade-up tilt-card mx-3 overflow-hidden"
+        style="margin-top:28px;border-top:4px solid rgba(200,130,140,.5)">
+        <div style="width:100%;height:360px;overflow:hidden;position:relative">
+          <picture>
+            <source srcset="Cô dâu.webp" type="image/webp">
+            <img src="Cô dâu.webp" alt="Ảnh Chân Dung Cô Dâu Vũ Thùy" width="1000" height="1333" loading="lazy"
+              style="width:100%;height:100%;object-fit:cover;object-position:top">
+          </picture>
+        </div>
+        <div class="text-center py-6"
+          style="background:linear-gradient(135deg,rgba(232,180,184,.12),rgba(253,246,238,1))">
+          <h3 class="name-script"
+            style="font-size:clamp(2.4rem,9vw,3.2rem);color:#8b5e3c;text-shadow:0 2px 10px rgba(139,94,60,.3)">
+            Vũ Thùy
+          </h3>
+          <p class="serif" style="color:#b08070;font-style:italic;font-size:.85rem;margin-top:6px;letter-spacing:2px">Cô
+            Dâu</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- STORY -->
+    <section class="section py-6" id="story" style="background:linear-gradient(180deg,#2d1808,#1a0d07)">
+
+      <!-- Card chính chứa ảnh Story.webp -->
+      <div class="card tilt-card fade-up mx-3" style="
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 12px 48px rgba(0,0,0,0.45);
+      ">
+      
+        <!-- Hiển thị ảnh trọn vẹn 100% không bao giờ bị hỏng form -->
+        <picture>
+          <source srcset="Story.webp" type="image/webp">
+          <img src="Story.webp" alt="Wedding Story Background" style="width: 100%; height: auto; display: block;">
+        </picture>
+
+        <!-- Overlay nhạt bên trong để text dễ đọc hơn trên mobile -->
+        <div style="
+          position: absolute; inset: 0;
+          background: linear-gradient(180deg, rgba(255,248,240,0.12) 0%, rgba(255,248,240,0.08) 60%, rgba(255,248,240,0) 100%);
+          pointer-events: none; z-index: 1;
+        "></div>
+
+        <!-- ===== NỘI DUNG ĐẶT NỔI LÊN TRÊN — định vị tự động 100% ===== -->
+        <div style="
+          position: absolute; inset: 0; z-index: 2;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          /* Khoảng thời gian trên dưới nhường chỗ cho hoa văn */
+          padding: 10% 8% 26%;
+          text-align: center;
+        ">
+
+          <!-- Tiêu đề CHUYỆN TÌNH -->
+          <p class="sect-label" style="
+            font-size: clamp(0.7rem, 2.5vw, 0.82rem);
+            letter-spacing: 4px;
+            margin-bottom: 2px;
+          ">CHUYỆN TÌNH</p>
+
+          <!-- Subtitle Our Love Story -->
+          <h2 class="script" style="
+            font-size: clamp(2.4rem, 10vw, 3rem);
+            color: #2d1808;
+            margin: 2px 0 8px;
+            line-height: 1.2;
+          ">Our Love Story</h2>
+
+          <!-- Đường kẻ vàng -->
+          <div class="gold-line" style="margin: 0 auto 14px;"></div>
+
+          <!-- Đoạn văn nội dung — font tự động co giãn, text justify, line-height thoáng -->
+          <p style="
+            font-size: clamp(0.9rem, 3.4vw, 1.05rem);
+            color: #7a6055;
+            line-height: 1.6;
+            text-align: justify;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            margin: 0;
+            max-width: 90%;
+          ">
+            &ldquo;Tình yêu của chúng tôi không bắt đầu bằng những điều rực rỡ, mà lớn lên từ những điều giản dị mỗi ngày. Từ những ánh nhìn đủ hiểu, những cái nắm tay đủ ấm, chúng tôi dần trở thành một phần không thể thiếu của nhau. Không ồn ào, không phô trương — chỉ lặng lẽ ở bên, nhưng đủ vững vàng để cùng nhau đi hết một hành trình dài. Và từ ngày đó, anh biết... nơi mình muốn quay về, luôn là em 💕&rdquo;
+          </p>
+        </div>
+
+        <!-- ===== TÊN + TRÁI TIM — absolute nhưng chỉ định vị trong vùng chibi, không đè text ===== -->
+        <div style="
+          position: absolute;
+          bottom: 10%;
+          left: 42%;
+          transform: translateX(-50%);
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          z-index: 3;
+        ">
+          <span class="name-script" style="font-size: clamp(1.45rem, 7vw, 1.7rem); color: #5c3317; line-height: 1.1;">Trọng Anh</span>
+          <img src="Heart_new.png" alt="Heart" loading="lazy" style="
+            width: clamp(35px, 9vw, 42px);
+            margin: 5px 0;
+            filter: drop-shadow(0 2px 4px rgba(201,169,110,0.6));
+          ">
+          <span class="name-script" style="font-size: clamp(1.45rem, 7vw, 1.7rem); color: #5c3317; line-height: 1.1;">Vũ Thùy</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAMILY SECTION - New design with couple photo on top + two columns below -->
+    <section class="section py-8" id="family" style="background:linear-gradient(180deg,#1a0d07,#2d1808)">
+      <div class="card tilt-card mx-3 overflow-hidden">
+
+        <!-- Ảnh gia đình phía trên -->
+        <div class="fade-up" style="width:100%;aspect-ratio:1/1;overflow:hidden;position:relative">
+          <picture>
+            <source srcset="Gia đình.webp" type="image/webp">
+            <img src="Gia đình.webp" alt="Gia Đình Trọng Anh & Vũ Thùy tại lễ đường" width="1080" height="1080"
+              loading="lazy" style="width:100%;height:100%;object-fit:cover;object-position:center 65%">
+          </picture>
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.35),transparent 50%)">
+          </div>
+        </div>
+
+        <!-- Tiêu đề & 2 cột bên dưới -->
+        <div class="px-6 pb-6 pt-3 text-center">
+          <p class="sect-label" style="font-family:'Poppins',sans-serif;letter-spacing:4px;margin-top:-8px">GIA ĐÌNH</p>
+          <h2 class="fade-up name-script" style="font-size:clamp(1.4rem,6vw,2.0rem);color:#2d1808;margin:12px 0">Hai Họ
+          </h2>
+          <div class="gold-line" style="margin-bottom:20px"></div>
+
+          <div class="grid grid-cols-2 gap-3">
+
+            <!-- NHÀ TRAI -->
+            <div class="fade-up rounded-xl p-4"
+              style="background:linear-gradient(160deg,rgba(184,212,232,.18),rgba(253,246,238,.95));border:1px solid rgba(100,160,220,.25)">
+              <h3 class="serif"
+                style="color:#3c5e8b;font-size:clamp(0.9rem, 4vw, 1.1rem);font-weight:700;margin-bottom:8px;letter-spacing:.5px">Nhà Trai</h3>
+              <div
+                style="height:1px;background:linear-gradient(90deg,transparent,rgba(60,94,139,.25),transparent);margin-bottom:10px">
+              </div>
+              <p style="color:#455570;font-size:clamp(0.45rem, 2.4vw, 0.65rem);margin-bottom:6px;font-family:'Playfair Display',serif;white-space:nowrap">
+                Ông: <span style="font-size:clamp(0.55rem, 3.2vw, 0.85rem); color: #2d4a73; font-style:italic">Hoàng Phú Thắng</span></p>
+              <p style="color:#455570;font-size:clamp(0.45rem, 2.4vw, 0.65rem);margin-bottom:12px;font-family:'Playfair Display',serif;white-space:nowrap">
+                Bà: <span style="font-size:clamp(0.55rem, 3.2vw, 0.85rem); color: #2d4a73; font-style:italic">Phạm Thị Doan</span></p>
+              <p style="color:#6a9bca;font-size:clamp(0.55rem, 2.5vw, 0.65rem);font-style:italic;letter-spacing:.5px;line-height:1.4">📍 Tp. Hải Phòng</p>
+            </div>
+
+            <!-- NHÀ GÁI -->
+            <div class="fade-up rounded-xl p-4"
+              style="background:linear-gradient(160deg,rgba(232,180,184,.18),rgba(253,246,238,.95));border:1px solid rgba(200,130,140,.25);transition-delay:.08s">
+              <h3 class="serif"
+                style="color:#8b5e3c;font-size:clamp(0.9rem, 4vw, 1.1rem);font-weight:700;margin-bottom:8px;letter-spacing:.5px">Nhà Gái</h3>
+              <div
+                style="height:1px;background:linear-gradient(90deg,transparent,rgba(139,94,60,.25),transparent);margin-bottom:10px">
+              </div>
+              <p style="color:#6b5545;font-size:clamp(0.45rem, 2.4vw, 0.65rem);margin-bottom:6px;font-family:'Playfair Display',serif;white-space:nowrap">
+                Ông: <span style="font-size:clamp(0.55rem, 3.2vw, 0.85rem); color: #70452d; font-style:italic">Vũ Hữu Sỹ</span></p>
+              <p style="color:#6b5545;font-size:clamp(0.45rem, 2.4vw, 0.65rem);margin-bottom:12px;font-family:'Playfair Display',serif;white-space:nowrap">
+                Bà: <span style="font-size:clamp(0.55rem, 3.2vw, 0.85rem); color: #70452d; font-style:italic">Bùi Thị Dung</span></p>
+              <p style="color:#c9a96e;font-size:clamp(0.55rem, 2.5vw, 0.65rem);font-style:italic;letter-spacing:.5px;line-height:1.4">📍 Tp. Hải Phòng</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DETAILS SECTION - New elegant time & location design with large date -->
+    <section class="section py-10" id="details" style="background:linear-gradient(145deg,#1a0a03,#2d1808,#5c3317)">
+      <div class="card tilt-card mx-3 overflow-hidden fade-up">
+
+        <!-- Gold top border accent -->
+        <div style="height:4px;background:linear-gradient(90deg,transparent,#c9a96e,#f0d9a0,#c9a96e,transparent)"></div>
+
+        <div class="p-7 text-center">
+          <!-- Invitation header -->
+          <p
+            style="font-family:'Poppins',sans-serif;font-size:clamp(0.55rem, 2.8vw, 0.7rem);letter-spacing:2px;color:#c9a96e;font-weight:600;margin-bottom:8px">
+            TRÂN TRỌNG KÍNH MỜI BẠN ĐẾN DỰ</p>
+          <p class="serif" style="color:#5c3317;font-size:clamp(0.9rem, 4vw, 1.05rem);font-style:italic;margin-bottom:20px">Lễ Thành Hôn của chúng tôi</p>
+
+          <!-- Decorative line -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:24px">
+            <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.5))"></div>
+            <span style="color:#c9a96e;font-size:1rem">✦</span>
+            <div style="flex:1;height:1px;background:linear-gradient(270deg,transparent,rgba(201,169,110,.5))"></div>
+          </div>
+
+          <!-- Time info -->
+          <p
+            style="font-family:'Poppins',sans-serif;font-size:clamp(0.6rem, 2.8vw, 0.75rem);letter-spacing:1.5px;color:#8b6350;margin-bottom:20px">
+            THÂN MỜI BẠN ĐẾN DỰ LỄ THÀNH HÔN <br> ĐƯỢC TỔ CHỨC VÀO <strong style="color:#5c3317">17:00, CHỦ NHẬT</strong>
+          </p>
+
+          <!-- BIG DATE block -->
+          <div style="display:flex;align-items:center;justify-content:center;gap:15px;margin:20px 0">
+            <div style="text-align:right">
+              <p class="serif" style="font-size:1.3rem;color:#5c3317;font-weight:700;white-space:nowrap">Tháng 5</p>
+            </div>
+            <div
+              style="padding:0 15px;border-left:1px solid rgba(201,169,110,.4);border-right:1px solid rgba(201,169,110,.4)">
+              <p
+                style="font-family:'Cinzel',serif;font-size:clamp(2.8rem,10vw,3.8rem);color:#2d1808;font-weight:700;line-height:1;text-shadow:0 4px 15px rgba(201,169,110,.2)">
+                31</p>
+            </div>
+            <div style="text-align:left">
+              <p class="serif" style="font-size:1.3rem;color:#5c3317;font-weight:700;white-space:nowrap">Năm 2026</p>
+            </div>
+          </div>
+
+          <!-- Lunar date -->
+          <p
+            style="font-family:'Poppins',sans-serif;font-size:.7rem;color:#a07060;font-style:italic;margin-bottom:24px">
+            (Tức ngày 15 tháng 04 năm Bính Ngọ)</p>
+
+          <!-- Divider -->
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
+            <div style="flex:1;height:1px;background:linear-gradient(90deg,transparent,rgba(201,169,110,.4))"></div>
+            <span style="color:#c9a96e;font-size:.8rem">❧</span>
+            <div style="flex:1;height:1px;background:linear-gradient(270deg,transparent,rgba(201,169,110,.4))"></div>
+          </div>
+
+          <!-- Venue name -->
+          <p class="script" style="font-size:clamp(1.8rem,7vw,2.4rem);color:#5c3317;margin-bottom:6px">Tại Tư Gia Nhà Gái</p>
+
+          <!-- Full address -->
+          <p style="font-family:'Poppins',sans-serif;font-size:.78rem;color:#7a5e4a;line-height:2;margin-bottom:0">
+            Địa chỉ: Đội 10, thôn Hòa Nhất,<br>xã Kiến Hưng, Thành phố Hải Phòng</p>
+        </div>
+
+        <!-- Gold bottom border accent -->
+        <div style="height:4px;background:linear-gradient(90deg,transparent,#c9a96e,#f0d9a0,#c9a96e,transparent)"></div>
+      </div>
+    </section>
+
+
+    <!-- MAP -->
+    <section class="section py-6" id="map" style="background:linear-gradient(180deg,#1a0d07,#2d1808)">
+      <div class="card tilt-card mx-3 p-6">
+        <div class="text-center mb-8">
+          <p class="sect-label">ĐỊA ĐIỂM</p>
+          <h2 class="fade-up serif" style="font-size:clamp(1.5rem,5vw,2rem);color:#2d1808;margin-top:6px">Đường Đến Lễ
+            Cưới</h2>
+          <div class="gold-line"></div>
+        </div>
+        <div class="fade-up"
+          style="border-radius:16px;overflow:hidden;box-shadow:0 16px 60px rgba(0,0,0,.2);border:1px solid rgba(201,169,110,.2)">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d931.89!2d106.689102!3d20.728481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1746403396000!5m2!1svi!2s"
+            width="100%" height="360" style="border:0;display:block" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="text-center mt-6">
+          <a href="https://maps.app.goo.gl/su8hXqV8YmzpgLBV9" target="_blank"
+            class="btn-gold" style="text-decoration:none">📍 Mở Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SLIDESHOW -->
+    <section class="section py-6" id="gallery" style="background:linear-gradient(180deg,#2d1808,#1a0d07)">
+      <div class="card tilt-card mx-3 p-6">
+        <div class="text-center mb-8">
+          <p class="sect-label">KỶ NIỆM</p>
+          <h2 class="fade-up serif" style="font-size:clamp(1.8rem,6vw,2.4rem);color:#2d1808;margin-top:6px">Album of
+            Love</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <!-- Main Slideshow Wrapper -->
+        <div class="fade-up" id="slideshow-main"
+          style="position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:12px;box-shadow:0 15px 45px rgba(201,169,110,0.2), 0 0 0 1px rgba(201,169,110,0.15);background:#1a0d07;cursor:pointer;">
+          <!-- Images inserted here by JS -->
+        </div>
+
+        <!-- Thumbnails -->
+        <div class="fade-up" id="slideshow-thumbs"
+          style="display:flex;gap:10px;margin-top:16px;overflow-x:auto;padding-bottom:12px;scroll-behavior:smooth;scrollbar-width:none;-ms-overflow-style:none">
+          <!-- Thumbnails inserted here by JS -->
+        </div>
+        <style>
+          #slideshow-thumbs::-webkit-scrollbar {
+            display: none;
+          }
+
+          .slide-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0;
+            transform: translateX(30px) scale(1.02);
+            transition: opacity 1.2s ease-in-out, transform 1.2s ease-in-out;
+          }
+
+          .slide-img.active {
+            opacity: 1;
+            transform: translateX(0) scale(1);
+            z-index: 2;
+          }
+
+          .slide-img.prev {
+            opacity: 0;
+            transform: translateX(-30px) scale(0.98);
+            z-index: 1;
+          }
+
+          #slideshow-thumbs picture {
+            width: calc(20% - 8px);
+            aspect-ratio: 3/4;
+            flex-shrink: 0;
+          }
+
+          .thumb-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.3s;
+            display: block;
+            border-radius: 12px;
+            border: 2px solid transparent;
+          }
+
+          .thumb-img.active {
+            opacity: 1;
+            border-color: #c9a96e;
+            box-shadow: 0 4px 10px rgba(201, 169, 110, 0.4);
+          }
+        </style>
+      </div>
+    </section>
+
+    <!-- RSVP SECTION - Simplified: only name + message, real-time guestbook display below form with localStorage -->
+    <section class="section py-8" id="rsvp" style="background:#fdf6ee">
+      <div class="card tilt-card mx-3 p-6 text-center shadow-lg"
+        style="background:#ffffff; border:1px solid rgba(201,169,110,.2)">
+        <div class="mb-6">
+          <p class="sect-label">XÁC NHẬN</p>
+          <h2 class="fade-up name-script" style="font-size:clamp(2.8rem,9vw,3.6rem);color:#2d1808;margin-top:6px">Gửi
+            Lời Chúc</h2>
+          <div class="gold-line"></div>
+        </div>
+
+        <form id="rsvp-form" class="fade-up text-left">
+          <input type="text" id="r-name" placeholder="Tên của bạn" required
+            style="border:1px solid rgba(201,169,110,.4); padding:12px; border-radius:8px; width:100%;">
+
+          <textarea id="r-msg" placeholder="Lời chúc của bạn..." rows="3" required
+            style="margin-top:12px; border:1px solid rgba(201,169,110,.4); padding:12px; border-radius:8px; width:100%;"></textarea>
+
+          <button type="submit" class="btn-gold"
+            style="width:100%;margin-top:10px;border-radius:50px;padding:12px;font-weight:500;display:flex;justify-content:center;align-items:center;gap:6px;">
+            Gửi Lời Chúc 💌
+          </button>
+
+          <div id="rsvp-ok"
+            style="display:none;text-align:center;color:#8b5e3c;padding:12px;background:rgba(201,169,110,.15);border-radius:12px;margin-top:14px;font-size:.88rem;border:1px solid rgba(201,169,110,.3)">
+            💕 Cảm ơn lời chúc của bạn!
+          </div>
+        </form>
+
+        <!-- Guestbook Display Area -->
+        <div class="fade-up" style="margin-top:32px; border-top:1px dashed rgba(201,169,110,.4); padding-top:20px;">
+          <h3 class="serif" style="color:#c9a96e;font-size:1.15rem;margin-bottom:4px;">Lời chúc từ bạn bè</h3>
+          <p id="gb-status"
+            style="font-size:.72rem;color:rgba(160,120,80,.6);margin-bottom:14px;font-family:'Poppins',sans-serif;">⏳
+            Đang tải...</p>
+          <div id="wishes"
+            style="display:flex;flex-direction:column;gap:12px;text-align:left;max-height:320px;overflow-y:auto;padding-right:6px;">
+            <!-- Rendered via Google Sheets JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- COUNTDOWN -->
+    <section class="section py-8" id="countdown" style="background:linear-gradient(180deg,#1a0d07,#2d1808)">
+      <div class="card tilt-card mx-3 p-6 text-center">
+        <p class="script gold" style="font-size:1.8rem">Đếm Ngược</p>
+        <h2 class="fade-up serif"
+          style="font-size:clamp(1.6rem,6vw,2.2rem);color:#5c3317;font-weight:700;margin-top:4px">Còn Bao Lâu Nữa?</h2>
+        <div class="gold-line"></div>
+        <p style="color:#a07850;font-size:.95rem;margin-top:10px;font-style:italic">31 tháng 05 năm 2026 — 17:00</p>
+        <div class="flex justify-between items-end mt-8 flex-nowrap px-1" style="width:100%">
+          <div class="text-center fade-up" style="flex:1">
+            <div class="flip" id="cd-d" style="width:100%;max-width:64px;margin:0 auto;padding:10px 0;font-size:2rem">00
+            </div>
+            <p
+              style="color:#8b6350;font-size:.72rem;letter-spacing:1px;margin-top:8px;font-family:'Poppins',sans-serif">
+              NGÀY</p>
+          </div>
+          <div
+            style="color:#c9a96e;font-size:1.6rem;margin-bottom:24px;padding:0 1px;font-family:'Playfair Display',serif">
+            :</div>
+          <div class="text-center fade-up" style="transition-delay:.1s;flex:1">
+            <div class="flip" id="cd-h" style="width:100%;max-width:64px;margin:0 auto;padding:10px 0;font-size:2rem">00
+            </div>
+            <p
+              style="color:#8b6350;font-size:.72rem;letter-spacing:1px;margin-top:8px;font-family:'Poppins',sans-serif">
+              GIỜ</p>
+          </div>
+          <div
+            style="color:#c9a96e;font-size:1.6rem;margin-bottom:24px;padding:0 1px;font-family:'Playfair Display',serif">
+            :</div>
+          <div class="text-center fade-up" style="transition-delay:.2s;flex:1">
+            <div class="flip" id="cd-m" style="width:100%;max-width:64px;margin:0 auto;padding:10px 0;font-size:2rem">00
+            </div>
+            <p
+              style="color:#8b6350;font-size:.72rem;letter-spacing:1px;margin-top:8px;font-family:'Poppins',sans-serif">
+              PHÚT</p>
+          </div>
+          <div
+            style="color:#c9a96e;font-size:1.6rem;margin-bottom:24px;padding:0 1px;font-family:'Playfair Display',serif">
+            :</div>
+          <div class="text-center fade-up" style="transition-delay:.3s;flex:1">
+            <div class="flip" id="cd-s" style="width:100%;max-width:64px;margin:0 auto;padding:10px 0;font-size:2rem">00
+            </div>
+            <p
+              style="color:#8b6350;font-size:.72rem;letter-spacing:1px;margin-top:8px;font-family:'Poppins',sans-serif">
+              GIÂY</p>
+          </div>
+        </div>
+        <p id="cd-done"
+          style="display:none;font-family:'Great Vibes',cursive;font-size:2.8rem;color:#c9a96e;margin-top:18px">Ngày Vui
+          Đã Đến! 🎊</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="section py-16" style="background:linear-gradient(145deg,#1a0a03,#2d1808)">
+      <div class="mx-4 text-center tilt-card">
+        <div style="font-size:2.2rem;margin-bottom:14px">🌸</div>
+        <h2 class="script"
+          style="font-size:clamp(3rem,12vw,5.5rem);color:white;text-shadow:0 4px 30px rgba(201,169,110,.4);line-height:1.2">
+          Lời Cảm Ơn</h2>
+        <div class="gold-line" style="opacity:.4;width:160px"></div>
+        <p
+          style="color:rgba(255,255,255,.6);margin:12px 0;font-size:.92rem;line-height:1.9;font-family:'Poppins',sans-serif">
+          Chân thành cảm ơn bạn đã dành thời gian<br>đến chung vui và chúc phúc cho chúng tôi!</p>
+        <!-- CONSISTENT COUPLE NAME FONT: Alex Brush -->
+        <div class="name-script"
+          style="font-size:clamp(2.5rem,9vw,4rem);color:#c9a96e;margin-top:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px">
+          <span>Trọng Anh</span>
+          <picture>
+            <source srcset="Heart_new.png" type="image/png">
+            <img src="Heart_new.png" width="65" height="65"
+              style="width:65px;height:auto;display:block;filter:drop-shadow(0 2px 4px rgba(201,169,110,.4))" alt="♥"
+              loading="lazy">
+          </picture>
+          <span>Vũ Thùy</span>
+        </div>
+        <p style="color:rgba(255,255,255,.2);font-size:.65rem;margin-top:22px;letter-spacing:4px">31 • 05 • 2026 • HẢI
+          PHÒNG</p>
+        <p style="color:rgba(255,255,255,.12);font-size:.6rem;margin-top:5px;letter-spacing:3px">WEDDING INVITATION</p>
+      </div>
+    </footer>
+
+  </div><!-- end .wrap -->
+
+  <button id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Lên đầu trang">↑</button>
+
+
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script>
+    // Three.js particles
+    (function () {
+      const c = document.getElementById('threejs');
+      if (!c) return;
+      function init() {
+        if (typeof THREE === 'undefined') { setTimeout(init, 200); return }
+        const r = new THREE.WebGLRenderer({ canvas: c, alpha: true, antialias: true });
+        r.setPixelRatio(Math.min(devicePixelRatio, 2)); r.setSize(innerWidth, innerHeight);
+        const s = new THREE.Scene(), cam = new THREE.PerspectiveCamera(75, innerWidth / innerHeight, .1, 1000);
+        cam.position.z = 5;
+        /* PERFORMANCE OPTIMIZED - N = 45 mobile / 70 desktop */
+        const m = innerWidth < 768, N = m ? 45 : 70, pos = new Float32Array(N * 3), vel = [];
+        for (let i = 0; i < N; i++) { pos[i * 3] = (Math.random() - .5) * 20; pos[i * 3 + 1] = (Math.random() - .5) * 20; pos[i * 3 + 2] = (Math.random() - .5) * 8; vel.push({ vx: (Math.random() - .5) * .004, vy: Math.random() * .007 + .002 }); }
+        const geo = new THREE.BufferGeometry(); geo.setAttribute('position', new THREE.BufferAttribute(pos, 3));
+        const pts = new THREE.Points(geo, new THREE.PointsMaterial({ color: 0xc9a96e, size: m ? .08 : .06, transparent: true, opacity: .45 }));
+        s.add(pts);
+        const rg = new THREE.Mesh(new THREE.TorusGeometry(2.2, .007, 8, 70), new THREE.MeshBasicMaterial({ color: 0xc9a96e, transparent: true, opacity: .15 })); s.add(rg);
+        function tick() { requestAnimationFrame(tick); const p = geo.attributes.position.array; for (let i = 0; i < N; i++) { p[i * 3] += vel[i].vx; p[i * 3 + 1] += vel[i].vy; if (p[i * 3 + 1] > 10) { p[i * 3 + 1] = -10; p[i * 3] = (Math.random() - .5) * 20; } if (Math.abs(p[i * 3]) > 10) vel[i].vx *= -1; } geo.attributes.position.needsUpdate = true; pts.rotation.y += .0003; rg.rotation.z += .002; r.render(s, cam); }
+        tick();
+        addEventListener('resize', () => { cam.aspect = innerWidth / innerHeight; cam.updateProjectionMatrix(); r.setSize(innerWidth, innerHeight); });
+      }
+      init();
+    })();
+
+    // Cinematic Particles & Petals
+    (function () {
+      const sx = ['🌸', '✨', '✦', '❄️'], n = innerWidth < 768 ? 8 : 15;
+      for (let i = 0; i < n; i++) {
+        const e = document.createElement('div');
+        const isSparkle = Math.random() > .5;
+        const sz = isSparkle ? (Math.random() * 5 + 2) : (Math.random() * 12 + 8);
+        e.textContent = sx[Math.floor(Math.random() * sx.length)];
+        e.style.cssText = `
+          position:fixed;
+          left:${Math.random() * 100}vw;
+          top:-50px;
+          font-size:${sz}px;
+          pointer-events:none;
+          z-index:1;
+          color:${isSparkle ? '#c9a96e' : 'inherit'};
+          text-shadow:${isSparkle ? '0 0 10px rgba(201,169,110,0.8)' : 'none'};
+          opacity:${Math.random() * .6 + .2};
+          filter:${isSparkle ? 'blur(0.5px)' : 'blur(1px)'};
+          animation:pFall ${Math.random() * 15 + 10}s linear ${Math.random() * 10}s infinite
+        `;
+        document.body.appendChild(e);
+      }
+    })();
+
+    // PERFORMANCE OPTIMIZED - Preloader: 1200ms (was 1800ms)
+    window.addEventListener('load', () => { setTimeout(() => { const p = document.getElementById('preloader'); p.style.opacity = '0'; setTimeout(() => p.style.display = 'none', 700); }, 1200); });
+
+    // Envelope
+    document.getElementById('open-btn').addEventListener('click', function () {
+      this.disabled = true;
+      document.getElementById('env-flap').classList.add('open');
+      document.getElementById('env-card').classList.add('open');
+      // PERFORMANCE OPTIMIZED - Flying hearts: 18 hearts (was 28), faster close
+      for (let i = 0; i < 18; i++) {
+        let h = document.createElement('div'); h.innerHTML = '❤️'; h.className = 'flying-heart';
+        let tx = (Math.random() - .5) * 420, ty = -(Math.random() * 380 + 40), rot = (Math.random() - .5) * 160;
+        h.style.setProperty('--tx', tx + 'px'); h.style.setProperty('--ty', ty + 'px'); h.style.setProperty('--rot', rot + 'deg');
+        h.style.animationDuration = (Math.random() * 1 + 1.2) + 's'; h.style.fontSize = (Math.random() * 12 + 12) + 'px'; h.style.animationDelay = (Math.random() * .15) + 's';
+        document.getElementById('env-overlay').appendChild(h); setTimeout(() => h.remove(), 2500);
+      }
+      setTimeout(() => { const p = document.getElementById('env-photo'); if (p) p.classList.add('pop'); }, 250);
+      setTimeout(() => {
+        document.getElementById('env-card').style.opacity = '0';
+        const o = document.getElementById('env-overlay'); o.style.transition = 'opacity 0.8s'; o.style.opacity = '0';
+        setTimeout(() => { o.style.display = 'none'; document.getElementById('bg-music').play().catch(() => { }); playing = true; }, 800);
+      }, 1700);
+    });
+
+    // Music
+    let playing = false;
+    document.getElementById('music-btn').addEventListener('click', () => {
+      const m = document.getElementById('bg-music');
+      if (playing) { m.pause(); playing = false; document.getElementById('music-btn').style.opacity = '.5'; }
+      else { m.play().catch(() => { }); playing = true; document.getElementById('music-btn').style.opacity = '1'; }
+    });
+
+    // Countdown
+    function pad(n) { return String(Math.max(0, n)).padStart(2, '0') }
+    function cdTick() {
+      const diff = new Date('2026-05-31T17:00:00+07:00') - Date.now();
+      if (diff <= 0) { ['cd-d', 'cd-h', 'cd-m', 'cd-s'].forEach(id => { const e = document.getElementById(id); if (e) e.textContent = '00'; }); const d = document.getElementById('cd-done'); if (d) d.style.display = 'block'; return; }
+      const D = Math.floor(diff / 864e5), H = Math.floor(diff % 864e5 / 36e5), M = Math.floor(diff % 36e5 / 6e4), S = Math.floor(diff % 6e4 / 1e3);
+      [['cd-d', D], ['cd-h', H], ['cd-m', M], ['cd-s', S]].forEach(([id, v]) => { const e = document.getElementById(id); if (e) e.textContent = pad(v); });
+    }
+    cdTick(); setInterval(cdTick, 1000);
+
+    // Gallery Slideshow (Hoàn toàn bằng .webp)
+    const images = Array.from({ length: 10 }, (_, i) => ({ webp: `Album/${i + 1}.webp`, fallback: `Album/${i + 1}.webp` }));
+    const mainContainer = document.getElementById('slideshow-main');
+    const thumbsContainer = document.getElementById('slideshow-thumbs');
+    let currentSlide = 0;
+    let slideInterval;
+
+    if (mainContainer && thumbsContainer) {
+      images.forEach(({ webp, fallback }, i) => {
+        // Main slide: Dùng <picture> bảo đảm CSS
+        const pic = document.createElement('picture');
+        const src = document.createElement('source');
+        src.srcset = webp; src.type = 'image/webp';
+
+        const img = document.createElement('img');
+        img.src = fallback;
+        img.alt = `Ảnh kỷ niệm ${i + 1}`;
+        img.width = 900; img.height = 1200;
+        img.className = 'slide-img' + (i === 0 ? ' active' : '');
+        img.loading = i < 3 ? 'eager' : 'lazy';
+
+        pic.appendChild(src);
+        pic.appendChild(img);
+        mainContainer.appendChild(pic);
+
+        // Thumbnail: Dùng <picture> nhỏ
+        const thumbPic = document.createElement('picture');
+        const thumbSrc = document.createElement('source');
+        thumbSrc.srcset = webp; thumbSrc.type = 'image/webp';
+
+        const thumbImg = document.createElement('img');
+        thumbImg.src = fallback;
+        thumbImg.alt = `Ảnh thu nhỏ ${i + 1}`;
+        thumbImg.width = 65; thumbImg.height = 65;
+        thumbImg.className = 'thumb-img' + (i === 0 ? ' active' : '');
+        thumbImg.loading = 'lazy';
+
+        thumbPic.appendChild(thumbSrc);
+        thumbPic.appendChild(thumbImg);
+        thumbPic.addEventListener('click', () => goToSlide(i));
+        thumbsContainer.appendChild(thumbPic);
+      });
+
+      function goToSlide(index) {
+        if (index === currentSlide) return;
+        const slides = mainContainer.querySelectorAll('.slide-img');
+        const thumbs = thumbsContainer.querySelectorAll('.thumb-img');
+
+        let oldSlide = currentSlide;
+        currentSlide = index;
+
+        slides[oldSlide].classList.remove('active');
+        slides[oldSlide].classList.add('prev');
+        thumbs[oldSlide].classList.remove('active');
+
+        slides[currentSlide].classList.remove('prev');
+        slides[currentSlide].classList.add('active');
+        thumbs[currentSlide].classList.add('active');
+
+        setTimeout(() => {
+          if (slides[oldSlide]) slides[oldSlide].classList.remove('prev');
+        }, 1200);
+
+        const thumbRect = thumbs[currentSlide].getBoundingClientRect();
+        const containerRect = thumbsContainer.getBoundingClientRect();
+        thumbsContainer.scrollBy({ left: thumbRect.left - containerRect.left - containerRect.width / 2 + thumbRect.width / 2, behavior: 'smooth' });
+
+        resetInterval();
+      }
+
+      mainContainer.addEventListener('click', () => {
+        goToSlide((currentSlide + 1) % images.length);
+      });
+
+      function resetInterval() {
+        clearInterval(slideInterval);
+        slideInterval = setInterval(() => goToSlide((currentSlide + 1) % images.length), 5000);
+      }
+      resetInterval();
+    }
+
+    // Tilt
+    /* GLOBAL TILT-CARD EFFECT FOR ALL SECTIONS */
+    document.querySelectorAll('.tilt-card').forEach(c => {
+      c.addEventListener('mousemove', e => { const rect = c.getBoundingClientRect(); const x = (e.clientX - rect.left) / rect.width - .5, y = (e.clientY - rect.top) / rect.height - .5; c.style.transform = `perspective(1000px) rotateX(${-y * 18}deg) rotateY(${x * 18}deg) scale(1.015)`; });
+      c.addEventListener('mouseleave', () => c.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)');
+    });
+
+    // Fade observer
+    new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: .08 }).observe.bind(null);
+    document.querySelectorAll('.fade-up').forEach(el => { new IntersectionObserver(es => { es.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }); }, { threshold: .08 }).observe(el); });
+
+  </script>
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+    import {
+      getFirestore,
+      collection,
+      addDoc,
+      query,
+      where,
+      orderBy,
+      onSnapshot,
+      serverTimestamp
+    } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-firestore.js";
+
+    // ===== FIREBASE CONFIG (USER MUST EDIT) =====
+    const firebaseConfig = {
+      apiKey: "AIzaSyCsL4ZX7gRSZqS4xGUAxTrIakHPp8Kpaz4",
+      authDomain: "wedding-55c10.firebaseapp.com",
+      projectId: "wedding-55c10",
+    };
+
+    let app, db;
+
+    function initFirebase() {
+      app = initializeApp(firebaseConfig);
+      db = getFirestore(app);
+    }
+
+    function escapeHtml(str) {
+      if (!str) return "";
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;");
+    }
+
+    function listenWishes() {
+      const q = query(
+        collection(db, "wishes"),
+        where("weddingId", "==", "AnhThuy2505"),
+        orderBy("timestamp", "desc")
+      );
+
+      const wishList = document.getElementById("wishes");
+      const statusEl = document.getElementById("gb-status");
+
+      onSnapshot(q, (snapshot) => {
+        if (!wishList) return;
+        
+        let html = "";
+        if (snapshot.empty) {
+          html = '<p style="text-align:center;color:rgba(122,96,85,0.6);font-size:.85rem;padding:12px 0;">Chưa có lời chúc nào. Hãy là người đầu tiên! 💌</p>';
+          if (statusEl) statusEl.textContent = '0 lời chúc';
+        } else {
+          snapshot.forEach((doc, i) => {
+            const data = doc.data();
+            const delay = Math.min(i * 0.07, 0.42);
+            html += `
+              <div class="wish" style="animation-delay:${delay}s">
+                <strong>${escapeHtml(data.name)}</strong>
+                <p>${escapeHtml(data.message)}</p>
+              </div>
+            `;
+          });
+          if (statusEl) statusEl.textContent = '✨ ' + snapshot.size + ' lời chúc · Cảm ơn lời yêu thương của bạn';
+        }
+        wishList.innerHTML = html;
+        
+      }, (error) => {
+        console.error("Firestore onSnapshot Error:", error);
+        
+        // If you see "failed-precondition":
+        // Go to browser console → click Firebase link → create index
+        if (error.code === "failed-precondition") {
+          if (wishList) {
+            wishList.innerHTML = "<p style='color:red;'>Hệ thống đang thiết lập index lần đầu, vui lòng chờ vài phút và tải lại trang.</p>";
+          }
+        }
+      });
+    }
+
+    initFirebase();
+    document.addEventListener("DOMContentLoaded", listenWishes);
+
+    // RSVP Form — Lưu vào Firebase Firestore
+    const rsvpForm = document.getElementById('rsvp-form');
+    if (rsvpForm) {
+      rsvpForm.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        
+        const nameEl = document.getElementById("r-name");
+        const msgEl = document.getElementById("r-msg");
+        
+        if (!nameEl || !msgEl) return;
+        
+        const name = nameEl.value.trim();
+        const message = msgEl.value.trim();
+
+        if (!name || !message) {
+          alert("Vui lòng nhập đầy đủ tên và lời chúc.");
+          return;
+        }
+
+        if (message.length >= 300) {
+          alert("Vui lòng nhập lời chúc dưới 300 ký tự.");
+          return;
+        }
+
+        const btn = this.querySelector('button[type="submit"]');
+        const rsvpOk = document.getElementById('rsvp-ok');
+
+        if (btn) { btn.disabled = true; btn.textContent = 'Đang gửi...'; }
+
+        try {
+          await addDoc(collection(db, "wishes"), {
+            weddingId: "AnhThuy2505",
+            name: name,
+            message: message,
+            timestamp: serverTimestamp()
+          });
+          
+          if (rsvpOk) {
+            rsvpOk.innerHTML = '💕 Cảm ơn <strong>' + escapeHtml(name) + '</strong> đã gửi lời chúc!';
+            rsvpOk.style.display = 'block';
+            setTimeout(() => { rsvpOk.style.display = 'none'; }, 5000);
+          }
+          rsvpForm.reset();
+        } catch (error) {
+          console.error("Lỗi khi lưu dữ liệu:", error);
+          if (rsvpOk) {
+            rsvpOk.innerHTML = '⚠️ Gửi thất bại: ' + error.code + '. Vui lòng thử lại.';
+            rsvpOk.style.display = 'block';
+          }
+        } finally {
+          if (btn) { btn.disabled = false; btn.textContent = 'Gửi Lời Chúc 💌'; }
+        }
+      });
+    }
+  </script>
+  <script>
+    // Copy STK
+    function copyText(t, id) { navigator.clipboard.writeText(t).then(() => { const b = document.getElementById(id); if (b) { b.textContent = '✅ Đã sao chép!'; setTimeout(() => b.textContent = '📋 Sao chép STK', 2000); } }).catch(() => alert('STK: ' + t)); }
+
+    // Back to top
+    window.addEventListener('scroll', () => { const b = document.getElementById('btt'); if (window.scrollY > 400) b.classList.add('show'); else b.classList.remove('show'); });
+  </script>
+
+
+  <style>
+
+    /* Lời chúc fade-in từ dưới lên — dùng cho .wish-item */
+    @keyframes wishFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ===== .wish — thẻ lời chúc từ Google Sheets ===== */
+    .wish {
+      background: #ffffff;
+      border-left: 3px solid #c9a96e;
+      border-radius: 10px;
+      padding: 14px 16px;
+      box-shadow: 0 2px 10px rgba(201, 169, 110, 0.12);
+      animation: wishFadeIn 0.5s ease-out both;
+    }
+
+    .wish strong {
+      display: block;
+      color: #a88350;
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .wish p {
+      color: #5c3317;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+    }
+
+    /* Scrollbar cho #wishes */
+    #wishes::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #wishes::-webkit-scrollbar-thumb {
+      background: rgba(201, 169, 110, 0.4);
+      border-radius: 2px;
+    }
+  </style>
+
+</body>
+
+</html>
